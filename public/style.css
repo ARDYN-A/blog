@@ -1,0 +1,124 @@
+:root {
+    color-scheme: light;
+    --background: #f6f8f5;
+    --text: #202722;
+    --muted: #657068;
+    --accent: #087451;
+    --rule: #d5ddd7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 4vw, 3rem);
+    color: var(--text);
+    background: var(--background);
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", monospace;
+    line-height: 1.65;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.25rem;
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.06em;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+header > p:first-of-type,
+time,
+footer {
+    color: var(--muted);
+}
+
+nav {
+    margin-bottom: 3.5rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    color: var(--text);
+    background: #dfe9e2;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+section + section {
+    margin-top: 4rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.7rem;
+}
+
+section:first-child li {
+    display: grid;
+    grid-template-columns: 7.5rem 1rem minmax(0, 1fr);
+    align-items: baseline;
+}
+
+section:first-child > p {
+    margin-top: 1.5rem;
+}
+
+footer {
+    margin-top: 4.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 38rem) {
+    section:first-child li {
+        display: block;
+        margin-bottom: 1.25rem;
+    }
+
+    section:first-child time {
+        display: block;
+        font-size: 0.875rem;
+    }
+}
