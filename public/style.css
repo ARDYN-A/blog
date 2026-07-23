@@ -95,8 +95,7 @@ li {
 }
 
 section:first-child li {
-    display: grid;
-    grid-template-columns: 7.5rem 1rem minmax(0, 1fr);
+    display: flex;
     align-items: baseline;
 }
 
