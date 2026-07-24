@@ -104,6 +104,8 @@ section:first-child > p {
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     margin-top: 4.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--rule);
